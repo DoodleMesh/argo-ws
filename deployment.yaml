@@ -19,10 +19,10 @@ spec:
           image: kush233/draw-websocket:6fd704bf0a07da7380e43e1776d2e9639438fe61
           resources:
             requests:
+              cpu: "100m"
               memory: "256Mi"
-              cpu: "250m"
             limits:
+              cpu: "300m"
               memory: "512Mi"
-              cpu: "500m"
           ports:
             - containerPort: 8080
