@@ -1,16 +1,17 @@
-apiVersion: networking.istio.io/v1alpha3
+apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: wsbackend
+  namespace: doodlemesh
 spec:
   hosts:
-    - "draw.kushan23.com"
+    - draw.kushan23.com
   gateways:
-    - istio-system/ingress-gateway
+    - istio-system/platform-gateway
   http:
     - match:
         - uri:
-            prefix: /ws  
+            prefix: /ws
       route:
         - destination:
             host: wsbackend
