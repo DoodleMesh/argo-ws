@@ -17,3 +17,9 @@ spec:
             host: wsbackend.doodlemesh.svc.cluster.local
             port:
               number: 80
+      timeout: 0s
+      headers:
+        request:
+          set:
+            Connection: "upgrade"
+            Upgrade: "websocket"
